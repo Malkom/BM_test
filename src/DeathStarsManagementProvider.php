@@ -103,7 +103,7 @@ class DeathStarsManagementProvider extends ServiceProvider
             });
 
             Route::get('/', function () {
-                return factory(Ship::class, 1)->make()->each(function (Ship $ship) {
+                return factory(Ship::class, 10)->make()->each(function (Ship $ship) {
                     $faker = app('Faker\Generator');
                     if ($ship->type == 'medium') {
                         $ship->subordinates = \factory(Ship::class, $faker->numberBetween(0, (int)$ship->crews->count() / 3))->state('light')->make();
