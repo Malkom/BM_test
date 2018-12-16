@@ -1,0 +1,21 @@
+Application : Gestion de base statiale
+
+Nom : DeathStarsManagement
+
+
+1 Stations
+X Vaiseau
+
+
+Vaiseau
+    - matricule
+    - modele
+    - X personnels
+    - 0-n Vaiseaux
+
+
+
+Personnel
+    - matricule
+    - nom
+    - function

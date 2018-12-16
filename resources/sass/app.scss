@@ -1,0 +1,23 @@
+.color-white {
+  color: #ffffff;
+}
+
+body {
+  background-color: #c0c0c0
+}
+
+main{
+  min-width: 550px;
+}
+
+.header {
+  h1{
+    position: relative;
+    top: 86px;
+    z-index: 1;
+  }
+  img {
+    position: relative;
+    top: -56px
+  }
+}
