@@ -37,14 +37,14 @@ class DeathStarsManagementProvider extends ServiceProvider
          */
         $factory = app(Factory::class);
         $models = collect([
-            ['name' => 'Chasseur naboo', 'max' => 1, 'type' => 'light'],
-            ['name' => 'A-wing', 'max' => 1, 'type' => 'light'],
-            ['name' => 'B-wing', 'max' => 1, 'type' => 'light'],
-            ['name' => 'X-wing', 'max' => 1, 'type' => 'light'],
-            ['name' => 'Chasseur Aurek', 'max' => 1, 'type' => 'light'],
+            ['name' => 'TIE/D Defender', 'max' => 1, 'type' => 'light'],
+            ['name' => 'V-wing', 'max' => 1, 'type' => 'light'],
+            ['name' => 'VT-49 Decimator', 'max' => 1, 'type' => 'light'],
             ['name' => 'Chasseur TIE', 'max' => 1, 'type' => 'light'],
             ['name' => 'Canonnière d\'assaut TIO/BA', 'max' => 15, 'type' => 'light'],
-            ['name' => 'Corvette Corellienne', 'max' => 500, 'type' => 'medium'],
+            ['name' => 'qaz-class Star Destroyer', 'max' => 5000, 'type' => 'medium'],
+            ['name' => 'Gozanti-class Assault Carrier', 'max' => 1500, 'type' => 'medium'],
+            ['name' => 'battlecruisers', 'max' => 1500, 'type' => 'medium'],
             ['name' => 'Croiseur de classe Consular', 'max' => 3000, 'type' => 'medium'],
             ['name' => 'Destroyer Stellaire de classe Venator', 'max' => 2500, 'type' => 'medium'],
             ['name' => 'Interdictor ', 'max' => 5000, 'type' => 'medium'],
