@@ -1,17 +1,17 @@
-Application : Gestion de base statiale
+Application : Gestion de base spatiale
 
 Nom : DeathStarsManagement
 
 
 1 Stations
-X Vaiseau
+X Vaisseaux
 
 
-Vaiseau
+Vaisseau
     - matricule
-    - modele
+    - modèle
     - X personnels
-    - 0-n Vaiseaux
+    - 0-n Vaisseaux
 
 
 
@@ -24,15 +24,15 @@ Personnel
 TODO :
 
 #Back
-Crée la base de donnée
-Populé la base de donnée à l'aide des factory déjà crée
-Crée un catalogue des modèles existant
+Créer la base de données
+Populer la base de données à l'aide des factory déjà créées
+Créer un catalogue des modèles existants
 
 #Front
-Affiché le detail du vaiseau sur l'action : click btn "detail"
-    - La fiche detail doit listé la totalité des informations disponibles pour le vaiseau séléctioné
+Afficher le detail du vaisseau sur l'action : click btn "detail"
+    - La fiche détail doit lister la totalité des informations disponibles pour le vaisseau sélectionné
 
 #Back + Front
 Faire en sorte que l'affichage de la page soit rapide (~5-6s max).
-Ajouté une action : "reasigné" permettant de réasigné un membre d'équipage à un autre vaiseau
+Ajouter une action : "réassigner" permettant de réassigner un membre d'équipage à un autre vaisseau
 Séparer les pilotes du reste des membres d'équipage
