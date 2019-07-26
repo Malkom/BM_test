@@ -11,8 +11,6 @@
 |
 */
 
-use Bloom\DeathStarsManagement\Data\Ship;
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });

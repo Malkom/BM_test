@@ -6,7 +6,7 @@
         <td>{{ship.crews.length}}</td>
         <td>{{subordinateNb}}</td>
         <td>{{totalCrew}}</td>
-        <td><button class="btn">detail</button></td>
+        <td><button class="btn btn-info">detail</button></td>
     </tr>
 </template>
 

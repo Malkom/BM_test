@@ -16,9 +16,9 @@ use Illuminate\Database\Eloquent\Model;
  * Class Ship
  * @package Bloom\DeathStarsManagement\Data
  *
- * @property string $code
- * @property string $model
- * @property string $type
+ * @property string            $code
+ * @property string            $model
+ * @property string            $type
  * @property Crew[]|Collection $crews
  * @property Ship[]|Collection $subordinates
  */

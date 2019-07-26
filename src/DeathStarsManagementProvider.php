@@ -54,7 +54,7 @@ class DeathStarsManagementProvider extends ServiceProvider
             return [
                 'code' => $faker->randomNumber(5),
                 'name' => $faker->name,
-                'job' => $faker->jobTitle
+                'job'  => $faker->jobTitle
             ];
         });
         $factory->define(Ship::class, function (Generator $faker) use ($models) {
@@ -64,13 +64,14 @@ class DeathStarsManagementProvider extends ServiceProvider
              * @var Crew[]|Collection $crews
              */
             $min_crew = (int)($model['max'] * 0.1);
-            if($min_crew<1) $min_crew = 1;
-            $crews = \factory(Crew::class, $faker->numberBetween($min_crew, $model['max']) )->make();
+            if ($min_crew < 1) $min_crew = 1;
+            $crews = \factory(Crew::class, $faker->numberBetween($min_crew, $model['max']))->make();
             $crews[0]->job = 'Pilote';
+
             return [
-                'code' => $code,
+                'code'  => $code,
                 'model' => $model['name'],
-                'type' => $model['type'],
+                'type'  => $model['type'],
                 'crews' => $crews
             ];
         });
@@ -82,13 +83,14 @@ class DeathStarsManagementProvider extends ServiceProvider
              * @var Crew[]|Collection $crews
              */
             $min_crew = (int)($model['max'] * 0.1);
-            if($min_crew<1) $min_crew = 1;
-            $crews = \factory(Crew::class, $faker->numberBetween($min_crew, $model['max']) )->make();
+            if ($min_crew < 1) $min_crew = 1;
+            $crews = \factory(Crew::class, $faker->numberBetween($min_crew, $model['max']))->make();
             $crews[0]->job = 'Pilote';
+
             return [
-                'code' => $code,
+                'code'  => $code,
                 'model' => $model['name'],
-                'type' => 'light',
+                'type'  => 'light',
                 'crews' => $crews
             ];
         });
