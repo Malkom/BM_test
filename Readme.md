@@ -18,8 +18,8 @@ Spécification des données :
 ### Crew
 
 
-| champ      | type   |
-| ---------- | ------ |
-| matricule  | string |
-| nom        | string |
-| function   | string |
+| champ     | type   |
+| --------- | ------ |
+| matricule | string |
+| nom       | string |
+| job       | string |
