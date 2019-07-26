@@ -1,6 +1,6 @@
 # Gestion de base spatiale
 
-L'application permets de géré le personnels et les vaiseaux asignée à la station
+L'application permet de gérer le personnel et les vaisseaux assignés à la station
 
 Spécification des données :
 
