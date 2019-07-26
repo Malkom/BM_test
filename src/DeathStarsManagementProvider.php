@@ -85,7 +85,11 @@ class DeathStarsManagementProvider extends ServiceProvider
             $min_crew = (int)($model['max'] * 0.1);
             if ($min_crew < 1) $min_crew = 1;
             $crews = \factory(Crew::class, $faker->numberBetween($min_crew, $model['max']))->make();
-            $crews[0]->job = 'Pilote';
+            if($min_crew > 1) {
+                for($i = 0; $i<$faker->numberBetween(1, $crews->count() * 0.1); $i++) {
+                    $crews[$i]->job = 'Pilote';
+                }
+            }
 
             return [
                 'code'  => $code,

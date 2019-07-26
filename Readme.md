@@ -8,7 +8,7 @@ Spécification des données :
 
 
 | champ        | type   |
-| ------------ |: ----: |
+| ------------ | ------ |
 | matricule    | string |
 | modele       | string |
 | crews        | Crew[] |
@@ -19,7 +19,7 @@ Spécification des données :
 
 
 | champ      | type   |
-| ---------- |: ----: |
+| ---------- | ------ |
 | matricule  | string |
 | nom        | string |
 | function   | string |
