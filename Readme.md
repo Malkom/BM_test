@@ -11,6 +11,7 @@ Spécification des données :
 | ------------ | ------ |
 | matricule    | string |
 | modele       | string |
+| type         | string |
 | crews        | Crew[] |
 | subordinates | Ship[] |
 

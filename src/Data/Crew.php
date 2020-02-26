@@ -15,8 +15,8 @@ use Illuminate\Database\Eloquent\Model;
  * Class Crew
  * @package Bloom\DeathStarsManagement\Data
  *
- * @property string $code
- * @property string $name
+ * @property string $matricule
+ * @property string $nom
  * @property string $job
  */
 class Crew extends Model
