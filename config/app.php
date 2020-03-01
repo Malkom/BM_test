@@ -178,6 +178,7 @@ return [
         TwigBridge\ServiceProvider::class,
 
         \Bloom\DeathStarsManagement\DeathStarsManagementProvider::class,
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
     ],
 
     /*

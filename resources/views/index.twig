@@ -1,7 +1,32 @@
 {% extends 'layout.default' %}
 
 {% block content %}
-    <div id="app">
-        <ships-list></ships-list>
-    </div>
+{# {{ dump(ships) }}#}
+    <table class="table table-hover table-dark table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Code</th>
+            <th scope="col">Model</th>
+            <th scope="col">Nb crew</th>
+            <th scope="col">Nb subordinate</th>
+            <th scope="col">Total crew</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for ship in ships %}
+            <tr>
+                <th scope="row">{{loop.index - 1 }}</th>
+                <td>{{ship.code}}</td>
+                <td>{{ship.model}}</td>
+                <td>{{ship.crews | length}}</td>
+                <td>{{subordinateNb}}</td>
+                <td>{{totalCrew}}</td>
+                <td><button class="btn btn-info">detail</button></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
 {% endblock %}

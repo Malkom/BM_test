@@ -1,0 +1,36 @@
+.color-white {
+  color: #ffffff;
+}
+
+body {
+  background-color: #c0c0c0;
+}
+
+main {
+  min-width: 550px;
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  background-color: #010101;
+}
+
+.header h1 {
+  position: absolute;
+  top: 86px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header img {
+  position: relative;
+  z-index: 1;
+}
+
+th,
+td {
+  vertical-align: middle !important;
+}
+

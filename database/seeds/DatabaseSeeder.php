@@ -1,5 +1,6 @@
 <?php
 
+use App\Ship;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,6 +12,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        factory(Ship::class, 10)->create()->each(function (Ship $ship) {
+            $faker = app('Faker\Generator');
+            if ($ship->type == 'medium') {
+                $ship->subordinates = \factory(Ship::class, $faker->numberBetween(0, (int)$ship->crews->count() / 3))->state('light')->create();
+            }
+        });
     }
 }
