@@ -4,17 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Ship;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ShipController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        $ships = Ship::all();
+        $ships = DB::collection('ships')->get();
         return view('index', compact('ships'));
     }
 
@@ -42,12 +43,14 @@ class ShipController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Ship  $ship
-     * @return \Illuminate\Http\Response
+     * @param  \App\Ship  $idShip
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show(Ship $ship)
+    public function show($idShip)
     {
-        //
+
+        $ship = DB::collection('ships')->where('_id', '=', $idShip)->first();
+        return view('details', compact('ship'));
     }
 
     /**

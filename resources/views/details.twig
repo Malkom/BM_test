@@ -1,0 +1,66 @@
+{% extends 'layout.default' %}
+
+{% block content %}
+    <h1 class="text-center title">SHIP DETAILS</h1>
+    <div class="row mb-2">
+        <div class="col-12">
+            <div class="font-weight-bold h2 text-center mb-3">Type</div>
+            <div class="font-weight-bold h4">Matricule :&nbsp{{ ship.code }}</div>
+            <div class="font-weight-bold h4">Model :&nbsp{{ ship.model }}</div>
+            <div class="font-weight-bold h4 mb-2">Type :&nbsp{{ ship.type }}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5">
+            <div class="h2 text-center mb-3">Subordinates</div>
+            <table class="table table-dark table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Type</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for sub in ship.subordinates %}
+                    <tr>
+                        <th scope="row">{{ loop.index }}</th>
+                        <td>{{ sub.code }}</td>
+                        <td>{{ sub.model }}</td>
+                        <td>{{ sub.type }}</td>
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-7">
+            <div class="h2 text-center mb-3">Crews</div>
+            <table class="table table-dark table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Job</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for crew in ship.crews %}
+                    <tr>
+                        <th scope="row">{{ loop.index }}</th>
+                        <td>{{ crew.code }}</td>
+                        <td>{{ crew.name }}</td>
+                        <td>{{ crew.job }}</td>
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+{% endblock %}

@@ -1,7 +1,9 @@
 {% extends 'layout.default' %}
 
+{% set totalCrew = '' %}
+{% set nb = '' %}
+
 {% block content %}
-{# {{ dump(ships) }}#}
     <table class="table table-hover table-dark table-striped">
         <thead>
         <tr>
@@ -16,14 +18,22 @@
         </thead>
         <tbody>
             {% for ship in ships %}
+{#                {% set nb = ship.crews|length %}#}
+{#                {% if ship.subordinates %}#}
+{#                    {% for subordinate in ship.subordinates %}#}
+{#                        {% set nb =  nb + subordinate.crews|length %}#}
+{#                    {% endfor %}#}
+{#                {% else %}#}
+                    {%  set totalCrew = ship.crews|length + ship.subordinates|length %}
+{#                {% endif %}#}
             <tr>
-                <th scope="row">{{loop.index - 1 }}</th>
+                <th scope="row">{{loop.index}}</th>
                 <td>{{ship.code}}</td>
                 <td>{{ship.model}}</td>
                 <td>{{ship.crews | length}}</td>
-                <td>{{subordinateNb}}</td>
+                <td>{{ship.subordinates | length}}</td>
                 <td>{{totalCrew}}</td>
-                <td><button class="btn btn-info">detail</button></td>
+                <td><a class="btn btn-info" href="{{ url('/ships/'~ship._id~'/details ') }}">detail</a></td>
             </tr>
         {% endfor %}
         </tbody>

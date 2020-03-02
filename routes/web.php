@@ -12,5 +12,6 @@
 */
 
 Route::get('/', 'ShipController@index');
+Route::get('/ships/{idShip}/details', 'ShipController@show');
 
 
